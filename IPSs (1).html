@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Quiz Sederhana</title>
+    <!-- FontAwesome CDN Link untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Memulai tombol Kuis -->
+    <div class="start_btn"><button>Mulai Quiz!</button></div>
+ 
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Peraturan Dalam Mengerjakan Quiz !</span></div>
+        <div class="info-list">
+            <div class="info">1. Anda hanya memiliki waktu <span>15 detik</span> setiap pertanyaan.</div>
+            <div class="info">2. Setelah Anda memilih jawaban, itu tidak dapat diurungkan.</div>
+            <div class="info">3. Anda tidak dapat memilih opsi apa pun setelah waktu habis.</div>
+            <div class="info">4. Anda tidak dapat keluar dari Quis ketika Quis sedang berlangsung.</div>
+            <div class="info">5. Anda akan mendapatkan hasil setelah selesai mengerjakan semua Quiz.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Keluar Quiz</button>
+            <button class="restart">Lanjutkan</button>
+        </div>
+    </div>
+ 
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Awesome Quiz Application</div>
+            <div class="timer">
+                <div class="time_left_txt">Waktu Tersisa:</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Di sini saya telah memasukkan pertanyaan dari JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Di sini saya telah memasukkan semua opsi dari JavaScript -->
+            </div>
+        </section>
+ 
+        <!-- footer dari Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Di sini saya telah memasukkan Timer Pertanyaan dari JavaScript -->
+            </div>
+            <button class="next_btn">Selanjutnya</button>
+        </footer>
+    </div>
+ 
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="result-box custom-box">
+        <table>
+            <tr>
+                <td>Total Pertanyaan</td>
+                <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+                <td>Jawaban Benar</td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td>Jawaban Salah</td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td>Persentase</td>
+                <td><span class="percentage"></span></td>
+            </tr>
+            <tr>
+                <td>Total Score Anda</td>
+                <td><span class="total-score"></span></td>
+            </tr>
+        </table>
+    </div>
+        <div class="buttons">
+            <button class="restart">Ulangi Quiz</button>
+            <button class="quit">Keluar Quiz</button>
+        </div>
+    </div>
+ 
+    <!-- Di dalam file JavaScript ini saya telah memasukkan Pertanyaan dan Opsi saja -->
+    <script>
+//membuat array dan meneruskan nomor, pertanyaan, opsi, dan jawaban
+let questions = [
+    {
+        numb: 1,
+        question:"Pulau Sumatera sebelah selatan dan barat berbatasan dengan ?",
+        answer: "Selat Sunda dan Samudera Hindia",
+        options: [
+            "Selat Sunda dan Samudera Indonesia",
+            "Selat Sunda dan Samudera Hindia",
+            "Selat Sunda dan Samudera Indonesia",
+            "Selat Sunda dan Samudera Arktik"
+        ]
+    },
+    {
+        numb: 2,
+        question:"Salah satu pelabuhan yang terdapat di Provinsi Sumatera Barat adalah Pelabuhan ?",
+        answer: "Teluk Bayur",
+        options: [
+            "Teluk Bayur",
+            "Bakauheni",
+            "Tanjung Emas",
+            "Gilimanuk"
+        ]
+    },
+    {
+        numb: 3,
+        question:"Sebelah Timur Pulau Sumatera berbatasan dengan?",
+        answer: "Selat Malaka",
+        options: [
+            "Selat Malaka",
+            "Samudera Hindia",
+            "Teluk Benggala",
+            "Selat Sunda"
+        ]
+    },
+    {
+        numb: 4,
+        question:"Candi Borobudur merupakan kenampakan buatan yang merupakan ikon dari provinsi?",
+        answer: "Jawa Tengah",
+        options: [
+            "Jawa Tengah",
+            "Daerah Istimewa Yogyakarta",
+            "DKI Jakarta",
+            "Jawa Barat"
+        ]
+    },
+    {
+        numb: 5,
+        question:"Di wilayah Indonesia terdapat banyak gunung api yang masih aktif.salah satu contoh gunung api aktif di Indonesia yaitu Gunung Merapi.Gunung tersebut terletak di wilayah provinsi?",
+        answer: "Jawa Tengah dan Daerah Istimewa Yogyakarta",
+        options: [
+            "Jawa Tengah dan Daerah Istimewa Yogyakarta",
+            "DKI Jakarta dan Banten",
+            "Jawa Barat dan DKI Jakarta",
+            "Jawa Timur dan Jawa Tengah"
+        ]
+    },
+]
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+</html>
